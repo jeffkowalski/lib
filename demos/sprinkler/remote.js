@@ -73,11 +73,11 @@ function initPrograms()
                                              name + '</a></li>');
                     $('#program' + i).click(function(i, name) {
                         return function(e) {
-						    $('#programSelect').text(name);
-						    $('#zoneSelect').text("");
+                            $('#programSelect').text(name);
+                            $('#zoneSelect').text("");
                             startClick = function() { startProgram(i); };
                             console.log("prog " + i);
-                        }
+                        };
                     }(i, name));
                 }
             }
@@ -87,6 +87,14 @@ function initPrograms()
     });
 }
 
+
+function pad(n, width, z) {
+    z = z || '0';
+    n = n + '';
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+
 function initZones()
 {
     // Call ERPC getZones() to retrieve all of the zones
@@ -95,16 +103,16 @@ function initZones()
             // For each zone, insert it in the zone drop down list
             for (var i = 0; i < result.length; i++) {
                 if (result[i] != "") {
-                    var name = result[i] + ' (Zone ' + (i + 1) + ')';
+                    var name = pad(i+1, 2, " ") + '. ' + result[i];
                     $('#zoneList').append('<li><a href="#" id="zone' + i + '">' +
                                           name + '</a></li>');
                     $('#zone' + i).click(function(i, name) {
                         return function(e) {
-						    $('#programSelect').text("");
-						    $('#zoneSelect').text(name);
+                            $('#programSelect').text("");
+                            $('#zoneSelect').text(name);
                             startClick = function() { startZone(i); };
                             console.log("zone " + i);
-                        }
+                        };
                     }(i, name));
                 }
             }
@@ -117,7 +125,7 @@ function initZones()
 // Convert minutes to an HOUR:MIN format string
 function minsToHourMin(mins)
 {
-	return mins / 60 + ':' + mins;
+    return mins / 60 + ':' + mins;
 }
 
 // Initialize the controls
@@ -128,4 +136,3 @@ initPrograms();
 
 // Initialize the zones
 initZones();
-
