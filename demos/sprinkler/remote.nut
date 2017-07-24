@@ -11,7 +11,7 @@ require("GPIO");
 dofile("sd:/lib/buses/hunter/hunter.nut");
 
 //
-// Define your programs here.  Hunter supports 3 or 4 programs depending
+sr Define your programs here.  Hunter supports 3 or 4 programs depending
 // on the model.
 //
 programs <- [
@@ -35,8 +35,8 @@ zones <- [
     "front walk middle"
     "horseshoe around roses, then north of office along fence"
     "north roses and planting north of family room and office"
-    "east jasmine, rose semicircle, utility path and pots near guest room"
-    "middle jasmine and center of redwoods"
+    "utility path and pots near guest room, [temporary hookup to east of gate]"
+    "east jasmine, rose semicircle"
     "west jasmine and steps to planting beds"
     "rose garden below path toward driveway"
     "south planting boxes"
@@ -54,7 +54,7 @@ zones <- [
     "top left (west) of driveway"
     "(no connection)"
     "(no connection)"
-    "(no connection)"
+    "middle jasmine and center of redwoods"
 ];
 
 function init()
