@@ -35,7 +35,7 @@ zones <- [
     "front walk middle"
     "horseshoe around roses, then north of office along fence"
     "north roses and planting north of family room and office"
-    "utility path and pots near guest room, [temporary hookup to east of gate]"
+    "utility path and pots near guest room"
     "east jasmine, rose semicircle"
     "west jasmine and steps to planting beds"
     "rose garden below path toward driveway"
@@ -53,7 +53,7 @@ zones <- [
     "west (left) of driveway"
     "top left (west) of driveway"
     "(no connection)"
-    "(no connection)"
+    "walkway near iron gate"
     "middle jasmine and center of redwoods"
 ];
 
