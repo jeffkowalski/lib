@@ -11,7 +11,7 @@ require("GPIO");
 dofile("sd:/lib/buses/hunter/hunter.nut");
 
 //
-sr Define your programs here.  Hunter supports 3 or 4 programs depending
+// Define your programs here.  Hunter supports 3 or 4 programs depending
 // on the model.
 //
 programs <- [
@@ -49,7 +49,7 @@ zones <- [
     "east (right) side along driveway"
     "bottom east (right) driveway"
     "top right (east) and bottom left (west) of driveway"
-    "left (west) or driveway against field"
+    "left (west) of driveway against field"
     "west (left) of driveway"
     "top left (west) of driveway"
     "(no connection)"
